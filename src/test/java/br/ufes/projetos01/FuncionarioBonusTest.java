@@ -14,8 +14,7 @@ import org.junit.rules.ExpectedException;
 
 /**
  *
- * @author werikis Link:
- * https://docs.google.com/spreadsheets/d/10R77ZgvXol4xJhQvw8Se-iONq_wzOnmuYTU6hBl7BDM/edit?usp=sharing
+ * https://docs.google.com/spreadsheets/d/1yvC-SI-lwvw_MY3XWkwZo2y5Lq2nze91R0qM6Bqp7jY/edit#gid=2079776899
  */
 public class FuncionarioBonusTest {
 
