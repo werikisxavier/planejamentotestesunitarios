@@ -14,7 +14,8 @@ import org.junit.rules.ExpectedException;
 
 /**
  *
- * https://docs.google.com/spreadsheets/d/1yvC-SI-lwvw_MY3XWkwZo2y5Lq2nze91R0qM6Bqp7jY/edit#gid=2079776899
+ * Link planilha: https://docs.google.com/spreadsheets/d/1yvC-SI-lwvw_MY3XWkwZo2y5Lq2nze91R0qM6Bqp7jY/edit#gid=2079776899
+ * Link relatório: https://docs.google.com/document/d/1MAS82NOTfzdB-IUEtMpOMDs_f6Y-CiTi87poMD4cDDI/edit#
  */
 public class FuncionarioBonusTest {
 
