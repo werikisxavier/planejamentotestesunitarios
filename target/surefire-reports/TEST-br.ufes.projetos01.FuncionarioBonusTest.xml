@@ -1,91 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="23" failures="0" name="br.ufes.projetos01.FuncionarioBonusTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="br.ufes.projetos01.FuncionarioBonusTest" time="0.008" errors="0" skipped="0">
   <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_271\jre\bin"/>
-    <property name="java.vm.version" value="25.271-b09"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.292-b10"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\W-E-R\Documents\NetBeansProjects\BonusFuncinario2"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/vladimir/NetBeansProjects/planejamentotestes"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
-    <property name="path.separator" value=";"/>
+    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.script" value=""/>
-    <property name="user.country" value="BR"/>
+    <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="br.ufes.projetos01.FuncionarioBonusTest"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="br.ufes.projetos01.FuncionarioBonusTest#CT030"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\W-E-R\Documents\NetBeansProjects\BonusFuncinario2"/>
-    <property name="java.runtime.version" value="1.8.0_271-b09"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_271\jre\lib\endorsed"/>
+    <property name="user.dir" value="/home/vladimir/NetBeansProjects/planejamentotestes"/>
+    <property name="java.runtime.version" value="1.8.0_292-b10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk/jre/lib/endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\W-E-R\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\bin\m2.conf"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_271\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\nodejs\;D:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\W-E-R\AppData\Local\Microsoft\WindowsApps;C:\Users\W-E-R\AppData\Roaming\npm;C:\Users\W-E-R\AppData\Local\Programs\Microsoft VS Code\bin;."/>
-    <property name="maven.conf" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\../conf"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.ext.class.path" value="/usr/lib/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/usr/lib/netbeans/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/lib/netbeans/java/maven/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\lib\jansi-native"/>
-    <property name="user.home" value="C:\Users\W-E-R"/>
-    <property name="user.timezone" value="America/Sao_Paulo"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="os.version" value="5.13.12-arch1-1"/>
+    <property name="library.jansi.path" value="/usr/lib/netbeans/java/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/vladimir"/>
+    <property name="user.timezone" value="America/Bahia"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="W-E-R"/>
-    <property name="java.class.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="user.name" value="vladimir"/>
+    <property name="java.class.path" value="/usr/lib/netbeans/java/maven/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_271\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=br.ufes.projetos01.FuncionarioBonusTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=br.ufes.projetos01.FuncionarioBonusTest#CT030 -Dmaven.ext.class.path=/usr/lib/netbeans/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="pt"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_271"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_271\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_271\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_271\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_271\jre\classes"/>
+    <property name="java.version" value="1.8.0_292"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\.."/>
-    <property name="file.separator" value="\"/>
+    <property name="maven.home" value="/usr/lib/netbeans/java/maven"/>
+    <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.desktop" value="windows"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT001" time="0.004"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT002" time="0.004"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT003" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT004" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT005" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT006" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT007" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT008" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT009" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT010" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT011" time="0.001"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT012" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT013" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT014" time="0.003"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT015" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT016" time="0.001"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT017" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT018" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT019" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT020" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT021" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT022" time="0"/>
-  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT023" time="0"/>
+  <testcase classname="br.ufes.projetos01.FuncionarioBonusTest" name="CT030" time="0.008"/>
 </testsuite>

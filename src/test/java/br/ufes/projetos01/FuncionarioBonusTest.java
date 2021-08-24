@@ -1,6 +1,7 @@
 package br.ufes.projetos01;
 
 import br.ufes.calculodebonus.ProcessadoraBonus;
+import br.ufes.model.Bonus;
 import br.ufes.model.Funcionario;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,25 +19,19 @@ import org.junit.rules.ExpectedException;
  */
 public class FuncionarioBonusTest {
 
-    public FuncionarioBonusTest() {
-    }
+    public FuncionarioBonusTest() { }
 
     @BeforeClass
-    public static void setUpClass() {
-    }
+    public static void setUpClass() { }
 
     @AfterClass
-    public static void tearDownClass() {
-    }
+    public static void tearDownClass() { }
 
     @Before
-    public void setUp() {
-
-    }
+    public void setUp() { }
 
     @After
-    public void tearDown() {
-    }
+    public void tearDown() { }
 
     @Rule
     public ExpectedException excecaoEsperada = ExpectedException.none();
@@ -100,17 +95,17 @@ public class FuncionarioBonusTest {
         double salarioEsperado = 998.00;
 
         //Assert
-        assertEquals(salarioEsperado, funcionario.getSalario(), 0.001);
+        assertEquals(salarioEsperado, funcionario.getSalarioBase(), 0.001);
     }
 
     @Test
     public void CT007() throws Exception {
         //Arrange
-        excecaoEsperada.expect(Exception.class);
-        excecaoEsperada.expectMessage("#2 Informe um cargo válido");
+        Funcionario funcionario = new Funcionario("Fulano", 998.00, "Zelador");
+        double salarioEsperado = 998.00;
 
-        //Act 
-        Funcionario funcionario = new Funcionario("Fulano", 2500.00, "Boi");
+        //Assert
+        assertEquals(salarioEsperado, funcionario.getSalarioBase(), 0.001);
     }
 
     @Test
@@ -218,7 +213,7 @@ public class FuncionarioBonusTest {
         funcionario.setFaltas(0);
         ProcessadoraBonus pb = new ProcessadoraBonus();
         double salarioEsperado = 2725.00;
-
+        
         //Act        
         pb.processar(funcionario);
 
@@ -281,7 +276,7 @@ public class FuncionarioBonusTest {
         double salarioEsperado = 2600.00;
 
         //Act        
-        pb.processar(funcionario);
+        pb.processar(funcionario);        
 
         //Assert
         assertEquals(salarioEsperado, funcionario.getSalario(), 0.001);
@@ -335,4 +330,91 @@ public class FuncionarioBonusTest {
         assertEquals(salarioEsperado, funcionario.getSalario(), 0.001);
     }
 
+    @Test
+    public void CT024() throws Exception {
+        Funcionario funcionario = new Funcionario("Fulano", 2500.00, "Gerente");
+
+        //Arrange 
+        excecaoEsperada.expect(Exception.class);
+        excecaoEsperada.expectMessage("#1 Informe um nome válido");
+
+        //Act 
+        funcionario.setNome(null);
+    }
+    
+    @Test
+    public void CT025() throws Exception {
+        Funcionario funcionario = new Funcionario("Fulano", 2500.00, "Gerente");
+
+        //Arrange 
+        excecaoEsperada.expect(Exception.class);
+        excecaoEsperada.expectMessage("#1 Informe um nome válido");
+
+        //Act 
+        funcionario.setNome("");
+    }
+    
+        @Test
+    public void CT026() throws Exception {
+        Funcionario funcionario = new Funcionario("Fulano", 2500.00, "Gerente");
+
+        //Arrange 
+        excecaoEsperada.expect(Exception.class);
+        excecaoEsperada.expectMessage("#2 Informe um cargo válido");
+
+        //Act 
+        funcionario.setCargo(null);
+    }
+    
+    @Test
+    public void CT027() throws Exception {
+        Funcionario funcionario = new Funcionario("Fulano", 2500.00, "Gerente");
+
+        //Arrange 
+        excecaoEsperada.expect(Exception.class);
+        excecaoEsperada.expectMessage("#2 Informe um cargo válido");
+
+        //Act 
+        funcionario.setCargo("");
+    }
+    
+    @Test
+    public void CT028() throws Exception {
+        Funcionario funcionario = new Funcionario("Fulano", 998.00, "Gerente");
+
+        //Arrange 
+        excecaoEsperada.expect(Exception.class);
+        excecaoEsperada.expectMessage("#3 O salário base deve ser >= R$ 998,00");
+
+        //Act 
+        funcionario.setSalarioBase(997.00);
+    }
+    
+    @Test
+    public void CT029() throws Exception {
+        double salario = 998.00;
+        double salarioEsperado = 1047.9;
+        Funcionario funcionario = new Funcionario("Fulano", salario, "Gerente");
+        
+        funcionario.addBonus(new Bonus("Falta", salario * 0.05));        
+        funcionario.addBonus(new Bonus("Falta", salario * 0.05));
+
+        assertEquals(salarioEsperado, funcionario.getSalario(), 0.001);
+    }
+    
+        @Test
+    public void CT030() throws Exception {
+        //Arrange
+        Funcionario funcionario = new Funcionario("Fulano", 2500.00, "Gerente de Vendas");
+        funcionario.setFaltas(11);
+        ProcessadoraBonus pb = new ProcessadoraBonus();
+        double salarioEsperado = 2600.00;
+
+        //Act        
+        pb.processar(funcionario);
+
+        //Assert
+        assertEquals(salarioEsperado, funcionario.getSalario(), 0.001);
+    }
+    
 }

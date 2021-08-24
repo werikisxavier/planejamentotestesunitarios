@@ -4,5 +4,5 @@ import br.ufes.model.Funcionario;
 
 interface IMetodoCalculaBonus {
 
-    public void calcular(Funcionario funcionario);
+    public void calcular(Funcionario funcionario) throws Exception;
 }
