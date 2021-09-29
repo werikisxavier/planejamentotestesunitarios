@@ -1,12 +1,12 @@
 package br.ufes.model;
 
+import br.ufes.exceptions.AppException;
 import java.util.ArrayList;
 
 public final class Funcionario {
 
     private String nome;
     private double salarioBase;
-    private double salarioTotal;
     private int distanciaMoradia;
     private int faltas;
     private String cargo;
@@ -24,7 +24,7 @@ public final class Funcionario {
     }
 
     public void setNome(String nome) throws Exception {
-        if (nome == null || nome == "" || nome.matches("[0-9]*"))
+        if (nome == null || nome.isEmpty() || nome.matches("[0-9]*"))
             throw new Exception("\n#1 Informe um nome válido");
         
         this.nome = nome;
@@ -34,9 +34,9 @@ public final class Funcionario {
         return this.salarioBase;
     }
 
-    public void setSalarioBase(double salarioBase) throws Exception {
+    public void setSalarioBase(double salarioBase) throws AppException {
          if (salarioBase < 998.0)
-            throw new Exception("\n#3 O salário base deve ser >= R$ 998,00");
+            throw new AppException("\n#3 O salário base deve ser >= R$ 998,00");
         this.salarioBase = salarioBase;
     }
 
@@ -44,9 +44,9 @@ public final class Funcionario {
         return faltas;
     }
 
-    public void setFaltas(int faltas) throws Exception {
+    public void setFaltas(int faltas) throws AppException {
         if (faltas < 0  ){
-            throw new Exception("#4 A quantidade de faltas deve ser >= 0");
+            throw new AppException("#4 A quantidade de faltas deve ser >= 0");
         }
         
         this.faltas = faltas;
@@ -56,9 +56,9 @@ public final class Funcionario {
         return distanciaMoradia;
     }
 
-    public void setDistanciaMoradia(int distanciaMoradia) throws Exception {
+    public void setDistanciaMoradia(int distanciaMoradia) throws AppException {
         if (distanciaMoradia < 0  ){
-            throw new Exception("#5 A distancia deve ser >= 0");
+            throw new AppException("#5 A distancia deve ser >= 0");
         }
         
         this.distanciaMoradia = distanciaMoradia;
@@ -68,9 +68,9 @@ public final class Funcionario {
         return cargo;
     }
 
-    public void setCargo(String cargo) throws Exception {
+    public void setCargo(String cargo) throws AppException {
         if (cargo == null || cargo.equals(""))
-            throw new Exception("\n#2 Informe um cargo válido");
+            throw new AppException("\n#2 Informe um cargo válido");
         this.cargo = cargo;
     }
 
@@ -79,8 +79,7 @@ public final class Funcionario {
     }
 
     private double calculaSalario() {
-        this.salarioTotal = this.salarioBase + this.calculaTotalBonus();
-        return this.salarioTotal;
+        return this.salarioBase + this.calculaTotalBonus();
     }
 
     public void addBonus(Bonus bonus) {
@@ -99,12 +98,14 @@ public final class Funcionario {
 
         return totalBonus;
     }
-
+ 
     @Override
     public String toString() {
-        String strBonusRecebidos = "";
+
+        StringBuilder str = new StringBuilder();
+
         for (Bonus bonusRecebido : bonusRecebidos) {
-            strBonusRecebidos += "\n\t" + bonusRecebido;
+            str.append("\n\t" + bonusRecebido);
         }
         String strFuncionario = "Funcionario {"
                 + "nome: " + this.nome + ", "
@@ -113,8 +114,8 @@ public final class Funcionario {
                 + "salarioTotal: " + this.getSalario()
                 + '}';
 
-        if (bonusRecebidos.size() > 0) {
-            strFuncionario += "\nBonus recebidos: " + strBonusRecebidos;
+        if (!bonusRecebidos.isEmpty()) {
+            strFuncionario += "\nBonus recebidos: " + str.toString();
         }
 
         return strFuncionario;

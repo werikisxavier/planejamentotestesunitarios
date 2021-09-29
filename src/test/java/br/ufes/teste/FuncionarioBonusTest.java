@@ -1,7 +1,9 @@
-package br.ufes.projetos01;
+package br.ufes.teste;
 
 import br.ufes.calculodebonus.ProcessadoraBonus;
 import br.ufes.model.Bonus;
+import br.ufes.model.Bonus;
+import br.ufes.model.Funcionario;
 import br.ufes.model.Funcionario;
 import org.junit.After;
 import org.junit.AfterClass;

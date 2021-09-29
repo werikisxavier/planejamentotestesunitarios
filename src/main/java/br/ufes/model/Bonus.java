@@ -25,11 +25,6 @@ public class Bonus {
         return "Bonus: Tipo:" + this.tipo + ", valor:" + valor;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
-    }
 
     @Override
     public boolean equals(Object obj) {
@@ -43,10 +38,7 @@ public class Bonus {
             return false;
         }
         final Bonus other = (Bonus) obj;
-        if (!Objects.equals(this.tipo, other.tipo)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.tipo, other.tipo);
     }
 
     

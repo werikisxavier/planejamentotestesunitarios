@@ -1,12 +1,13 @@
 package br.ufes.calculodebonus;
 
+import br.ufes.exceptions.AppException;
 import br.ufes.model.Bonus;
 import br.ufes.model.Funcionario;
 
 class MetodoCalculaBonusDistancia implements IMetodoCalculaBonus {
 
     @Override
-    public void calcular(Funcionario funcionario) throws Exception {
+    public void calcular(Funcionario funcionario) throws AppException {
         int distanciaMoradia = funcionario.getDistanciaMoradia();
 
         String tipoBonus = "Distancia: " + distanciaMoradia + " Km";
