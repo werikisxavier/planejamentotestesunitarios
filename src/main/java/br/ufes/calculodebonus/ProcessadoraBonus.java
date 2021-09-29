@@ -15,7 +15,7 @@ public class ProcessadoraBonus {
         this.metodosDeCalculoBonus.add(new MetodoCalculoBonusCargo());
     }
 
-    public void processar(Funcionario funcionario) {
+    public void processar(Funcionario funcionario) throws Exception {
 
         for (IMetodoCalculaBonus metodoDeCalculoBonus : metodosDeCalculoBonus) {
             metodoDeCalculoBonus.calcular(funcionario);

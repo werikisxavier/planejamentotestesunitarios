@@ -6,7 +6,7 @@ import br.ufes.model.Funcionario;
 class MetodoCalculaBonusFalta implements IMetodoCalculaBonus {
 
     @Override
-    public void calcular(Funcionario funcionario) {
+    public void calcular(Funcionario funcionario) throws Exception {
         int faltas = funcionario.getFaltas();
         double salario = funcionario.getSalarioBase();
 

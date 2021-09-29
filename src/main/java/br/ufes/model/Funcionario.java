@@ -2,7 +2,7 @@ package br.ufes.model;
 
 import java.util.ArrayList;
 
-public class Funcionario {
+public final class Funcionario {
 
     private String nome;
     private double salarioBase;
@@ -13,27 +13,9 @@ public class Funcionario {
     private final ArrayList<Bonus> bonusRecebidos;
 
     public Funcionario(String nome, double salarioBase, String cargo) throws Exception {
-        String exceptions = "";
-
-        if (nome == null || nome == "" || nome.matches("[0-9]*")) {
-            exceptions = exceptions.concat("\n#1 Informe um nome válido");
-        }
-
-        if (cargo == null || !((cargo.toUpperCase().equals("GERENTE"))
-                || (cargo.toUpperCase().equals("SUPERVISOR"))
-                ||(cargo.toUpperCase().equals("PROGRAMADOR")))) {
-            exceptions = exceptions.concat("\n#2 Informe um cargo válido");
-        }
-        if (salarioBase < 998.0) {
-            exceptions = exceptions.concat("\n#3 O salário base deve ser >= R$ 998,00");
-        }
-
-        if (exceptions.length() > 0) {
-            throw new Exception(exceptions);
-        }
-        this.nome = nome;
-        this.cargo = cargo;
-        this.salarioBase = salarioBase;
+        this.setNome(nome);
+        this.setCargo(cargo);
+        this.setSalarioBase(salarioBase);
         this.bonusRecebidos = new ArrayList<>();
     }
 
@@ -41,7 +23,10 @@ public class Funcionario {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome) throws Exception {
+        if (nome == null || nome == "" || nome.matches("[0-9]*"))
+            throw new Exception("\n#1 Informe um nome válido");
+        
         this.nome = nome;
     }
 
@@ -49,7 +34,9 @@ public class Funcionario {
         return this.salarioBase;
     }
 
-    public void setSalarioBase(double salarioBase) {
+    public void setSalarioBase(double salarioBase) throws Exception {
+         if (salarioBase < 998.0)
+            throw new Exception("\n#3 O salário base deve ser >= R$ 998,00");
         this.salarioBase = salarioBase;
     }
 
@@ -70,7 +57,7 @@ public class Funcionario {
     }
 
     public void setDistanciaMoradia(int distanciaMoradia) throws Exception {
-            if (distanciaMoradia < 0  ){
+        if (distanciaMoradia < 0  ){
             throw new Exception("#5 A distancia deve ser >= 0");
         }
         
@@ -81,7 +68,9 @@ public class Funcionario {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(String cargo) throws Exception {
+        if (cargo == null || cargo.equals(""))
+            throw new Exception("\n#2 Informe um cargo válido");
         this.cargo = cargo;
     }
 
@@ -95,6 +84,10 @@ public class Funcionario {
     }
 
     public void addBonus(Bonus bonus) {
+        if(this.bonusRecebidos.contains(bonus)) {
+            this.bonusRecebidos.remove(bonus);
+        }
+        
         this.bonusRecebidos.add(bonus);
     }
 
