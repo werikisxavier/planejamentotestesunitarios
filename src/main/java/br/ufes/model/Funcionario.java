@@ -23,9 +23,9 @@ public final class Funcionario {
         return nome;
     }
 
-    public void setNome(String nome) throws Exception {
+    public void setNome(String nome) throws AppException {
         if (nome == null || nome.isEmpty() || nome.matches("[0-9]*"))
-            throw new Exception("\n#1 Informe um nome válido");
+            throw new AppException("\n#1 Informe um nome válido");
         
         this.nome = nome;
     }

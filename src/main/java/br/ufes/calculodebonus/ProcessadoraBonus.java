@@ -1,5 +1,6 @@
 package br.ufes.calculodebonus;
 
+import br.ufes.exceptions.AppException;
 import br.ufes.model.Funcionario;
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ public class ProcessadoraBonus {
         this.metodosDeCalculoBonus.add(new MetodoCalculoBonusCargo());
     }
 
-    public void processar(Funcionario funcionario) throws Exception {
+    public void processar(Funcionario funcionario) throws AppException {
 
         for (IMetodoCalculaBonus metodoDeCalculoBonus : metodosDeCalculoBonus) {
             metodoDeCalculoBonus.calcular(funcionario);
