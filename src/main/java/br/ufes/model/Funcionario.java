@@ -12,7 +12,7 @@ public final class Funcionario {
     private String cargo;
     private final ArrayList<Bonus> bonusRecebidos;
 
-    public Funcionario(String nome, double salarioBase, String cargo) throws Exception {
+    public Funcionario(String nome, double salarioBase, String cargo) throws AppException {
         this.setNome(nome);
         this.setCargo(cargo);
         this.setSalarioBase(salarioBase);
@@ -99,25 +99,5 @@ public final class Funcionario {
         return totalBonus;
     }
  
-    @Override
-    public String toString() {
-
-        StringBuilder str = new StringBuilder();
-
-        for (Bonus bonusRecebido : bonusRecebidos) {
-            str.append("\n\t" + bonusRecebido);
-        }
-        String strFuncionario = "Funcionario {"
-                + "nome: " + this.nome + ", "
-                + "salarioBase: " + this.salarioBase + ", "
-                + "totalBonus: " + this.calculaTotalBonus() + ", "
-                + "salarioTotal: " + this.getSalario()
-                + '}';
-
-        if (!bonusRecebidos.isEmpty()) {
-            strFuncionario += "\nBonus recebidos: " + str.toString();
-        }
-
-        return strFuncionario;
-    }
+   
 }
